@@ -1,11 +1,11 @@
 import {View,Image,Text,TouchableOpacity,StyleSheet, FlatList} from 'react-native'
 import React from 'react';
 import {Ionicons} from '@expo/vector-icons';
-import Cabecalho from './src/components/Cabecalho/index.js';
+import Cabecalho from './src/components/Cabecalho/Cabecalho';
 import Botao from './src/components/botoes/Index';
 import { FontAwesome } from '@expo/vector-icons';
 import Jogos from './src/components/Jogo';
-import JOGOS from './src/Dados/dadosJogos'; 
+import Dados from './src/Dados/dadosJogos';
 
 
 
@@ -48,7 +48,7 @@ export default function App(){
             />
         <FlatList
         horizontal = {true}
-        data = {JOGOS}
+        data = {Dados}
         keyExtractor = {(item)=> item.id}
         renderItem = {({item}) => (
 
